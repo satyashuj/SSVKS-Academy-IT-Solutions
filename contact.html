@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SSVKS Academy & IT Solutions</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <div class="logo-text">
+                SSVKS <span>SSVKS Academy & IT Solutions</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#programs">Programs</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="about.html">About</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Get In <span>Touch</span></h1>
+        <p>Have questions about Internships, Training, or Final Year Projects? We’re here to help!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+
+        <!-- Left Side: Contact Info Cards -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p class="info-sub">Reach out to us directly via email, phone, or WhatsApp for instant enrollment & project support.</p>
+
+            <div class="info-item">
+                <span class="info-icon">📧</span>
+                <div>
+                    <h4>Email Us</h4>
+                    <p>satyanshusaxena1481@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                    <h4>Call / WhatsApp</h4>
+                    <p>+91 6394745461</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                    <h4>Location</h4>
+                    <p>Kanpur Dehat Mati, Uttar Pradesh, India (Online & Offline)</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <span class="info-icon">⏰</span>
+                <div>
+                    <h4>Support Hours</h4>
+                    <p>Mon – Sat: 9:00 AM – 8:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Direct WhatsApp Quick Button -->
+            <a href="https://wa.me/916394745461?text=Hello%20SSVKS%20Academy!%20I%20want%20to%20enquire%20about%20Programs%20/%20Projects." 
+               target="_blank" class="whatsapp-btn">
+                💬 Chat Directly on WhatsApp
+            </a>
+        </div>
+
+        <!-- Right Side: Interactive Inquiry Form (Formspree) -->
+        <form id="contactForm" action="https://formspree.io/f/mvkadbvv" method="POST">
+            <h2>Send Us a Message</h2>
+
+            <input type="hidden" name="_subject" value="New Student Inquiry - SSVKS Academy & IT Solutions">
+
+            <div class="input-group">
+                <input type="text" id="name" name="Student Name" placeholder="Your Full Name *" required>
+                <input type="tel" id="phone" name="WhatsApp / Mobile" placeholder="WhatsApp / Mobile Number *" required>
+            </div>
+
+            <input type="email" id="email" name="Email Address" placeholder="Your Email Address *" required>
+
+            <select id="interest" name="Selected Program / Project" required>
+                <option value="" disabled selected>Select Program or Project *</option>
+                <optgroup label="Programs & Internships (₹2,599 - ₹5,499)">
+                    <option value="Summer Training (₹2,599)">Summer Training (₹2,599)</option>
+                    <option value="C & C++ Bootcamp (₹2,799)">C & C++ Bootcamp (₹2,799)</option>
+                    <option value="Core Java SE & Swing (₹3,299)">Core Java SE & Swing (₹3,299)</option>
+                    <option value="Python & Data Analytics (₹3,799)">Python & Data Analytics (₹3,799)</option>
+                    <option value="Web Development (₹3,999)">Web Development (₹3,999)</option>
+                    <option value=".NET & ASP.NET Web Forms (₹4,499)">.NET & ASP.NET Web Forms (₹4,499)</option>
+                    <option value="Data Science & AI (₹4,799)">Data Science & AI (₹4,799)</option>
+                    <option value="Java Enterprise - JSP & Spring Boot (₹5,199)">Java Enterprise - JSP & Spring Boot (₹5,199)</option>
+                    <option value="Full Stack MERN Development (₹5,499)">Full Stack MERN Development (₹5,499)</option>
+                </optgroup>
+                <optgroup label="Ready-Made & Final Year Projects">
+                    <option value="Java SE / Swing / JSP Project">Java SE / Swing / JSP Project</option>
+                    <option value="Spring Boot Enterprise Project">Spring Boot Enterprise Project</option>
+                    <option value="ASP.NET / Web Forms / ADO.NET Project">ASP.NET / Web Forms / ADO.NET Project</option>
+                    <option value="Python Data Analytics / ML Project">Python Data Analytics / ML Project</option>
+                    <option value="Web Development / MERN Project">Web Development / MERN Project</option>
+                </optgroup>
+            </select>
+
+            <textarea id="message" name="Message / Requirements" placeholder="Write your query or project requirements..." rows="5" required></textarea>
+
+            <button type="submit" id="submitBtn">🚀 Send Message</button>
+
+            <div id="formStatus" style="margin-top: 14px; font-weight: 600;"></div>
+        </form>
+    </section>
+
+    <!-- Quick FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">1. Kya training ke baad verifiable certificate milega? <span>+</span></div>
+                <div class="faq-answer">Haan! Har internship aur training program complete karne par aapko unique verification ID ke saath official SSVKS Academy & IT Solutions certificate milega.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">2. Final year projects ke saath kya-kya milta hai? <span>+</span></div>
+                <div class="faq-answer">Projects ke saath complete Source Code, Database file, Synopsis, Project Report (DOCX/PDF), PPT aur laptop par setup support milta hai.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">3. Classes online hoti hain ya offline? <span>+</span></div>
+                <div class="faq-answer">Dono options available hain! Aap live online mentorship sessions join kar sakte hain ya hamare Kanpur Dehat center par offline training le sakte hain.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>SSVKS Academy & IT Solutions</h3>
+        <p>© 2026 SSVKS Academy & IT Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Formspree Submission + FAQ Toggle Script -->
+    <script>
+    // Formspree AJAX Submit
+    document.getElementById("contactForm").addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const status = document.getElementById("formStatus");
+        const submitBtn = document.getElementById("submitBtn");
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "⏳ Sending Message...";
+        status.innerHTML = "";
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                status.style.color = "#34d399";
+                status.innerHTML = "✅ Thank you! Your inquiry has been sent to SSVKS Academy. We will contact you shortly.";
+                form.reset();
+            } else {
+                const data = await response.json();
+                status.style.color = "#fda4af";
+                status.innerHTML = data.errors
+                    ? "❌ " + data.errors.map(err => err.message).join(", ")
+                    : "❌ Oops! There was a problem submitting your form.";
+            }
+        } catch (error) {
+            status.style.color = "#fda4af";
+            status.innerHTML = "❌ Network error! Please check your internet connection and try again.";
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "🚀 Send Message";
+        }
+    });
+
+    // FAQ Accordion Toggle
+    document.querySelectorAll(".faq-question").forEach(q => {
+        q.addEventListener("click", () => {
+            const item = q.parentElement;
+            item.classList.toggle("active");
+            const icon = q.querySelector("span");
+            icon.textContent = item.classList.contains("active") ? "−" : "+";
+        });
+    });
+    </script>
+</body>
+</html>

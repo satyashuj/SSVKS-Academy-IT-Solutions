@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | SSVKS Academy & IT Solutions</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo" style="display:flex; align-items:center; gap:10px;">
+                    <img src="images/logo.png" alt="SSVKS Logo" style="width:38px; height:38px; border-radius:10px; object-fit:cover;">
+                    <div>SSVKS <span>Academy & IT</span></div>
+                </a>
+                <button class="close-sidebar" id="closeSidebar">✕</button>
+            </div>
+
+            <div class="student-mini-profile">
+                <div class="avatar" id="sidebarAvatar">S</div>
+                <div>
+                    <h4 id="sidebarName">Student Name</h4>
+                    <span class="status-dot">● Active Student</span>
+                </div>
+            </div>
+
+            <nav class="side-nav">
+                <button class="nav-item active" data-tab="overview">📊 Dashboard Overview</button>
+                <button class="nav-item" data-tab="courses">📚 My Enrolled Course</button>
+                <button class="nav-item" data-tab="payment">💳 Fee Payment & QR</button>
+                <button class="nav-item" data-tab="projects">🚀 Project Downloads</button>
+                <button class="nav-item" data-tab="certificate">🏆 My Certificate</button>
+                <button class="nav-item" data-tab="profile">👤 Profile & Settings</button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="home-link">🏠 Back to Website</a>
+                <button id="logoutBtn" class="logout-btn">🚪 Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="topbar">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <div class="welcome-text">
+                    <h2>Welcome back, <span id="headerName">Student</span>! 👋</h2>
+                    <p id="currentDate">Loading date...</p>
+                </div>
+                <div class="topbar-actions">
+                    <span class="student-id-badge" id="studentIdBadge">ID: SSVKS-2026-101</span>
+                </div>
+            </header>
+
+            <!-- ==========================================
+                 TAB 1: OVERVIEW
+            ========================================== -->
+            <section class="tab-content active" id="tab-overview">
+                <!-- Quick Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon purple">📘</div>
+                        <div>
+                            <p>Enrolled Program</p>
+                            <h3 id="statCourse">Full Stack Dev</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon blue">📈</div>
+                        <div>
+                            <p>Course Progress</p>
+                            <h3 id="statProgress">65% Completed</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">💻</div>
+                        <div>
+                            <p>Assigned Projects</p>
+                            <h3>2 Live Projects</h3>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon gold">🏅</div>
+                        <div>
+                            <p>Certificate Status</p>
+                            <h3 id="certStatusText">In Progress</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress & Live Class Grid -->
+                <div class="overview-grid">
+                    <!-- Course Progress Card -->
+                    <div class="panel-card">
+                        <h3>🎯 Your Learning Progress</h3>
+                        <p class="panel-sub" id="overviewCourseTitle">Selected Track</p>
+                        
+                        <div class="progress-wrapper">
+                            <div class="progress-label">
+                                <span>Overall Completion</span>
+                                <span id="progressPercent">65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="module-list">
+                            <div class="module-item done">✅ Module 1: Fundamentals & Environment Setup</div>
+                            <div class="module-item done">✅ Module 2: Core Programming & Logic Building</div>
+                            <div class="module-item active">⏳ Module 3: Database & Backend Integration (Current)</div>
+                            <div class="module-item">🔒 Module 4: Final Capstone Project & Deployment</div>
+                        </div>
+                    </div>
+
+                    <!-- Announcements & Live Session Card -->
+                    <div class="panel-card">
+                        <h3>📢 Live Mentorship & Updates</h3>
+                        <div class="notice-box">
+                            <span class="notice-tag">LIVE SESSION</span>
+                            <h4>Doubt Clearing & Project Review</h4>
+                            <p>Join live mentor session for Java, .NET, Python & Web projects.</p>
+                            <p class="notice-time">🕒 Today, 7:00 PM IST (Google Meet)</p>
+                            <a href="https://wa.me/919876543210?text=Hello%20Mentor!%20I%20need%20help%20with%20my%20SSVKS%20Academy%20course." target="_blank" class="action-btn">💬 Ask Mentor on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 TAB 2: MY ENROLLED COURSE
+            ========================================== -->
+            <section class="tab-content" id="tab-courses">
+                <div class="panel-card">
+                    <h2>📚 My Enrolled Program & Study Material</h2>
+                    <p class="panel-sub">Access syllabus notes, recorded lectures, and assignments.</p>
+
+                    <div class="course-banner">
+                        <div>
+                            <span class="badge-pill">Active Batch 2026</span>
+                            <h3 id="courseDetailName">Program Name</h3>
+                            <p>Includes Live Classes + Source Code + Verified Internship Certificate</p>
+                        </div>
+                        <button class="action-btn" id="completeModuleBtn">✅ Mark Next Module Complete (+15%)</button>
+                    </div>
+
+                    <div class="resources-grid">
+                        <div class="res-card">
+                            <h4>📄 Complete Syllabus & Notes (PDF)</h4>
+                            <p>Step-by-step handwritten & structured coding notes.</p>
+                            <button class="outline-btn resource-lock-btn" data-url="https://drive.google.com/">🔒 Submit Fee UTR to Unlock</button>
+                        </div>
+                        <div class="res-card">
+                            <h4>🎥 Recorded Class Archive</h4>
+                            <p>Watch missed live sessions anytime in HD quality.</p>
+                            <button class="outline-btn resource-lock-btn" data-url="https://drive.google.com/">🔒 Submit Fee UTR to Unlock</button>
+                        </div>
+                        <div class="res-card">
+                            <h4>📝 Weekly Coding Assignments</h4>
+                            <p>Practice problems to strengthen logic & interview prep.</p>
+                            <button class="outline-btn resource-lock-btn" data-url="https://github.com/satyashuj">🔒 Submit Fee UTR to Unlock</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 TAB 3: FEE PAYMENT & UPI QR CODE
+            ========================================== -->
+            <section class="tab-content" id="tab-payment">
+                <div class="panel-card">
+                    <h2>💳 Course Fee Payment (UPI / QR)</h2>
+                    <p class="panel-sub">Scan the QR code below using GPay, PhonePe, Paytm, or any UPI app to complete your enrollment.</p>
+
+                    <div class="payment-grid">
+                        <!-- Left: QR Code Box -->
+                        <div class="qr-box">
+                            <span class="badge-pill">Official SSVKS UPI</span>
+                            <div class="qr-frame">
+                                <img src="images/upi-qr.png" alt="SSVKS UPI QR Code">
+                            </div>
+                            <p class="upi-id-text">UPI ID: <strong id="academyUpiId">satyanshusaxena148181-1@okhdfcbank</strong></p>
+                            <button type="button" class="outline-btn" onclick="copyUpiId()">📋 Copy UPI ID</button>
+                        </div>
+
+                        <!-- Right: Payment Confirmation Form -->
+                        <div class="payment-confirm-box">
+                            <h3>Confirm Your Payment</h3>
+                            <p style="color:#94a3b8; font-size:13px; margin-bottom:16px;">
+                                Payment karne ke baad apna 12-digit UTR / Transaction ID neeche bharein taaki admin aapka course verify kar sake.
+                            </p>
+
+                            <form id="paymentConfirmForm" class="profile-form">
+                                <div class="form-group">
+                                    <label>Selected Course & Fee</label>
+                                    <input type="text" id="payCourseInfo" readonly style="color:#34d399; font-weight:700;">
+                                </div>
+                                <div class="form-group">
+                                    <label>12-Digit UPI Transaction ID / UTR Number</label>
+                                    <input type="text" id="payUtr" placeholder="e.g. 432910583921" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Payment App Used</label>
+                                    <input type="text" id="payApp" placeholder="e.g. PhonePe / Google Pay / Paytm" required>
+                                </div>
+                                <button type="submit" class="action-btn">✅ Submit Payment Details</button>
+                                <div id="payStatusMsg" style="margin-top:12px;"></div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Auto-Generated Fee Receipt Box -->
+                    <div id="feeReceiptBox" style="display:none; margin-top:26px; background:#090e17; border:1.5px solid #10b981; border-radius:18px; padding:24px;">
+                        <div id="printableReceipt" style="background:#ffffff; color:#0f172a; padding:28px; border-radius:12px; border:2px solid #0c244a; max-width:650px; margin:auto;">
+                            <div style="display:flex; justify-content:space-between; border-bottom:2px solid #0c244a; padding-bottom:12px; margin-bottom:16px;">
+                                <div>
+                                    <h3 style="color:#0c244a; margin:0;">SSVKS ACADEMY & IT SOLUTIONS</h3>
+                                    <p style="font-size:12px; color:#475569; margin:2px 0 0;">Official Fee Payment Receipt</p>
+                                </div>
+                                <div style="text-align:right; font-size:12px;">
+                                    <strong>Receipt No:</strong> <span id="recNo">REC-2026-01</span><br>
+                                    <strong>Date:</strong> <span id="recDate">--</span>
+                                </div>
+                            </div>
+                            <p style="margin:6px 0; font-size:14px;"><strong>Student Name:</strong> <span id="recName">--</span></p>
+                            <p style="margin:6px 0; font-size:14px;"><strong>Email:</strong> <span id="recEmail">--</span></p>
+                            <p style="margin:6px 0; font-size:14px;"><strong>Enrolled Program:</strong> <span id="recCourse">--</span></p>
+                            <p style="margin:6px 0; font-size:14px;"><strong>Payment App:</strong> <span id="recApp">--</span></p>
+                            <p style="margin:6px 0; font-size:14px;"><strong>UPI Transaction / UTR ID:</strong> <span id="recUtr" style="color:#059669; font-weight:700;">--</span></p>
+                            <div style="margin-top:18px; padding-top:12px; border-top:1px dashed #94a3b8; display:flex; justify-content:space-between; font-size:12px; color:#475569;">
+                                <span>Status: <strong style="color:#059669;">PAID (UTR RECORDED)</strong></span>
+                                <span>Authorized Signatory — SSVKS Academy</span>
+                            </div>
+                        </div>
+                        <div style="text-align:center; margin-top:16px;">
+                            <button type="button" class="action-btn" onclick="printFeeReceipt()">🧾 Print / Download Fee Receipt (PDF)</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 TAB 4: PROJECT DOWNLOADS
+            ========================================== -->
+            <section class="tab-content" id="tab-projects">
+                <div class="panel-card">
+                    <h2>🚀 My Projects & Documentation Kit</h2>
+                    <p class="panel-sub">Download your project source code, database SQL files, Synopsis & PPT.</p>
+
+                    <div class="resources-grid">
+                        <div class="res-card">
+                            <span class="tech-tag">Java SE / Spring Boot / JSP</span>
+                            <h4>Enterprise Management System</h4>
+                            <p>Complete source code + MySQL database + setup guide.</p>
+                            <button class="action-btn resource-lock-btn" data-url="https://github.com/satyashuj">🔒 Submit Fee UTR to Unlock</button>
+                        </div>
+                        <div class="res-card">
+                            <span class="tech-tag">ASP.NET / Web Forms / ADO.NET</span>
+                            <h4>College ERP & Billing Portal</h4>
+                            <p>Visual Studio solution + SQL Server script + report.</p>
+                            <button class="action-btn resource-lock-btn" data-url="https://github.com/satyashuj">🔒 Submit Fee UTR to Unlock</button>
+                        </div>
+                        <div class="res-card">
+                            <span class="tech-tag">Python • Data Analytics / ML</span>
+                            <h4>Business Analytics & Predictor</h4>
+                            <p>Jupyter Notebook + CSV Dataset + Project Report & PPT.</p>
+                            <button class="action-btn resource-lock-btn" data-url="https://github.com/satyashuj">🔒 Submit Fee UTR to Unlock</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 TAB 5: MY CERTIFICATE (SAME AS INDEX DESIGN)
+            ========================================== -->
+            <section class="tab-content" id="tab-certificate">
+                <div class="panel-card">
+                    <h2>🏆 Official Internship Certificate Preview</h2>
+                    <p class="panel-sub">Your certificate automatically updates with your registered name and course.</p>
+
+                    <div class="royal-cert" id="printableCert">
+                        <h3>SSVKS Academy & IT Solutions</h3>
+                        <p>CERTIFICATE OF COMPLETION</p>
+                        <h1>Certificate</h1>
+                        <p>This certificate is awarded to</p>
+                        <h2 id="certStudentName">Student Name</h2>
+                        <p>For successfully completing</p>
+                        <h3 id="certCourseName">Course Name</h3>
+                        <p id="certDuration">Duration: 6 Weeks</p>
+                        <p id="certIssueDate">Date: --</p>
+                        <div class="cert-footer">
+                            <span>Director Signature<br><strong>SSVKS Academy</strong></span>
+                            <span>Certificate ID: <strong id="certIdDisplay">SSVKS-2026-884</strong></span>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 25px;">
+                        <button class="action-btn" onclick="window.print()">🖨️ Print / Save Certificate as PDF</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==========================================
+                 TAB 6: PROFILE & SETTINGS
+            ========================================== -->
+            <section class="tab-content" id="tab-profile">
+                <div class="panel-card" style="max-width: 650px;">
+                    <h2>👤 Student Profile Details</h2>
+                    <p class="panel-sub">Update your personal details or change your enrolled track.</p>
+
+                    <form id="profileUpdateForm" class="profile-form">
+                        <div class="form-group">
+                            <label>Full Name (Appears on Certificate)</label>
+                            <input type="text" id="profName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address (Read Only)</label>
+                            <input type="email" id="profEmail" readonly style="opacity: 0.7; cursor: not-allowed;">
+                        </div>
+                        <div class="form-group">
+                            <label>WhatsApp / Mobile Number</label>
+                            <input type="tel" id="profPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Enrolled Program</label>
+                            <input type="text" id="profCourse" required>
+                        </div>
+                        <button type="submit" class="action-btn">💾 Save Profile Changes</button>
+                        <p id="profileSaveMsg" style="margin-top: 12px; color: #34d399; font-size: 14px;"></p>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
