@@ -3,3 +3,9 @@ Allow: /
 Disallow: /dashboard.html
 
 Sitemap: https://satyashuj.github.io/SSVKS-Academy-IT-Solutions/sitemap.xml
+User-agent: *
+Allow: /
+Disallow: /login.html
+Disallow: /dashboard.html
+
+Sitemap: https://satyashuj.github.io/SSVKS-Academy-IT-Solutions/sitemap.xml
